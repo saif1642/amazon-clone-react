@@ -12,14 +12,14 @@ function Home() {
             />
             <div className="home__row">
                 <Product 
-                    id="1233254568"
+                    id="1"
                     title="Finding Freedom: Harry and Meghan and the Making of a Modern Royal Family"
                     price={11.66}
                     rating={5}
                     image="https://images-na.ssl-images-amazon.com/images/I/417wTmjOxAL._SX329_BO1,204,203,200_.jpg"
                 />
                  <Product 
-                    id="1233254568"
+                    id="2"
                     title="Meghan and Harry: The Real Story"
                     price={11.66}
                     rating={5}
@@ -28,21 +28,21 @@ function Home() {
             </div>
             <div className="home__row">
                 <Product 
-                    id="1233254568"
+                    id="3"
                     title="Royals at War: The Untold Story of Harry and Meghan's Shocking Split with the House of Windsor"
                     price={11.66}
                     rating={4}
                     image="https://images-na.ssl-images-amazon.com/images/I/51zjJQV1pvL._SX332_BO1,204,203,200_.jpg"
                 />
                  <Product 
-                    id="1233254568"
+                    id="4"
                     title="Wild Game: My Mother, Her Secret, and Me"
                     price={11.66}
                     rating={3}
                     image="https://m.media-amazon.com/images/I/41t1ivNydsL.jpg"
                 />
                 <Product 
-                    id="1233254568"
+                    id="5"
                     title="Saint X: A Novel"
                     price={11.66}
                     rating={3}
@@ -51,7 +51,7 @@ function Home() {
             </div>
             <div className="home__row">
                 <Product 
-                    id="1233254568"
+                    id="6"
                     title="Clean Code: A Handbook of Agile Software Craftsmanship"
                     price={11.66}
                     rating={3}
