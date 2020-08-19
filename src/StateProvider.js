@@ -1,12 +1,14 @@
-import React, { useContext, createContext, useReducer } from 'react';
+// React contex API (similar but easier than Redux)
+// to avoid prop drilling, called setup data layer, like creating a global variable
+import React, {createContext, useContext, useReducer} from 'react';
 
-//Set up the data layer for common data store
-export const StateContext = createContext({});
+// This is the data layer
+export const StateContext = createContext();
 
-//Build a Provider to wrap our entire app
-export const StateProvider = ({ reducer, initialState, children}) => (
+// Build the provider
+export const StateProvider = ({reducer, initialState, children}) => (
     <StateContext.Provider value={useReducer(reducer, initialState)}>
-      {children}
+        {children} 
     </StateContext.Provider>
 );
 

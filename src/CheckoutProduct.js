@@ -1,38 +1,35 @@
-import React from 'react';
-import './CheckoutProduct.css';
-import { useStateValue } from './StateProvider';
+import React from 'react'
+import Star from '@material-ui/icons/Star'
+import {useStateValue} from './StateProvider'
+import './CheckoutProduct.css'
 
-function CheckoutProduct({id, title, image, price, rating}) {
-    const [state,dispatch] = useStateValue();
-    const removeFromBasket = () => {
+function CheckoutProduct({ id, title, price, rating, image }) {
+    const [{cart}, dispatch] = useStateValue();
+
+    const RemoveFromCart = () => {
         dispatch({
-            types:'REMOVE_FROM_BASKET',
-            id:id
+            type: 'REMOVE_FROM_CART',
+            id: id,
         })
     }
+
     return (
         <div className="checkoutProduct">
-            <img 
-                src={image} 
-                alt="product image" 
-                className="checkoutProduct__image"
-            />
+            <img src={image} className="checkoutProduct__image" alt=""/>
             <div className="checkoutProduct__info">
-                <div className="checkoutProduct__title">{title}</div>
-                <div className="checkoutProduct__price">
+                <p className="checkoutProduct__title">{title}</p>
+                <p className="checkoutProduct__price">
                     <small>$</small>
                     <strong>{price}</strong>
-                </div>
+                </p>
                 <div className="checkoutProduct__rating">
-                    {
-                        Array(rating).fill().map((_) => (
-                            <p>
-                                <img src="/image/star.png"  width="20"/>
-                            </p>
-                        ))
-                    }
+                    {Array(rating) 
+                    .fill()    
+                    .map((_) => (
+                    <p><Star className="product__star" /></p>
+                    ))}
                 </div>
-                <button onClick={removeFromBasket}>Remove From Basket</button>
+                <button onClick={RemoveFromCart}>Remove from cart</button>
             </div>
         </div>
     )
